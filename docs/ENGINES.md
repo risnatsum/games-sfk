@@ -1,23 +1,28 @@
 # Open-source engine options for a browser fighting game
 
+> **Decision (2026-10-31): Phaser + plain JavaScript + Vite, targeting mobile web.**
+> We chose Phaser because players will mostly be on Android phones opening a shared link, so a small, fast web build matters most. The team prefers JavaScript, which rules out Godot (GDScript) and Defold (Lua). App store builds aren't planned. If they're ever wanted, Capacitor can wrap the same code. The comparison below is kept for reference.
+
 What matters most for a browser fighting game:
 
 1. **Runs in the browser** with a small download.
 2. **Deterministic, fixed-timestep logic.** You need it for consistent frame data and, later, rollback netcode. Generic physics engines (Arcade, Matter, Box2D) are *not* what you want for fighting-game collision. Nearly every serious fighting game uses its own hitbox and hurtbox code, whatever the engine.
 3. **Sprite-sheet animation**, atlases, input (keyboard and gamepad) and audio.
-4. **TypeScript or JavaScript ecosystem**, so it's easy to deploy as a static site.
+4. **JavaScript ecosystem**, so it's easy to deploy as a static site.
+5. **Works well on mobile browsers**: touch input, small downloads, decent performance on budget Android phones.
 
 Licences are listed as best known. Check each project's `LICENSE` before you commit to it.
 
 ## Recommendation
 
-**Phaser + TypeScript + Vite, with a hand-written deterministic fight simulation.**
+**Phaser + JavaScript + Vite, with a hand-written deterministic fight simulation.**
 
-- Phaser handles the rendering (WebGL with Canvas fallback), sprite-sheet animation, scenes, the input and Gamepad APIs, audio, asset loading and scaling. That covers all the "game shell" work.
-- You write `step(state, p1Input, p2Input)` yourself, in plain TypeScript with no engine dependency. It's a few hundred lines for movement, hitboxes, hitstun and rounds, and you need it for rollback netcode anyway.
-- It's the largest ecosystem of HTML5 game examples and tutorials, the build is small, and it deploys to any static host.
+- Phaser handles the rendering (WebGL with Canvas fallback), sprite-sheet animation, scenes, input (touch, keyboard and gamepad), audio, asset loading and scaling to fit any screen. That covers all the "game shell" work.
+- You write `step(state, p1Input, p2Input)` yourself, in plain JavaScript with no engine dependency. It's a few hundred lines for movement, hitboxes, hitstun and rounds, and you need it for online play anyway.
+- It's the largest ecosystem of HTML5 game examples and tutorials, most of them in JavaScript. The build is small, loads fast on mobile data, and deploys to any static host.
+- If app store builds are ever wanted, **Capacitor** (MIT) wraps the same web build into Android and iOS apps.
 
-**Pick Godot instead if** you'd rather work in a visual editor (animation timeline, hitbox editing in the scene view) and accept a bigger first download.
+Godot or Defold would only be better for an app-first game, because they produce true native apps. That isn't the plan, and neither uses JavaScript.
 
 ## Main candidates
 
@@ -71,16 +76,18 @@ Licences are listed as best known. Check each project's `LICENSE` before you com
 
 ```
 src/
-  sim/            # deterministic, engine-free fight logic (pure TS, unit-tested)
-    state.ts      #   GameState type and initial state
-    step.ts       #   step(state, inputs) → state
-    collision.ts  #   hitbox/hurtbox overlap
-    rng.ts        #   seeded PRNG
+  sim/            # deterministic, engine-free fight logic (plain JS, unit-tested)
+    state.js      #   game state shape and initial state
+    step.js       #   step(state, inputs) → state
+    collision.js  #   hitbox/hurtbox overlap
+    rng.js        #   seeded PRNG
   data/
     fighters/     # per-fighter JSON: stats, moves, frame data, hitboxes
     stages/
-  render/         # Phaser scenes that draw GameState (no game logic here)
-  input/          # keyboard/gamepad → per-frame input bitmask, input buffer
-  net/            # (v1.2) WebRTC + rollback
+  render/         # Phaser scenes that draw the game state (no game logic here)
+  input/          # touch/keyboard/gamepad → per-frame input bitmask, input buffer
+    touch.js      #   virtual joystick + buttons
+  net/            # (v1.1) PeerJS/WebRTC friend matches
 public/assets/    # sprite atlases, audio
+public/manifest   # PWA manifest + icons (via vite-plugin-pwa)
 ```
