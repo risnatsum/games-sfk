@@ -1,8 +1,17 @@
-# Playable Character Template
+# Playable Character Template (2D fighter)
 
-Copy this file to `design/characters/<parody-name>.md` and fill in each section. The type, stat, status and field rules are in `design/type-system.md`. Bios, voice lines and sensitivity rules come from `research/character-copy.md`.
+Copy this file to `design/characters/<parody-name>.md` and fill in each section. The type rules, core systems and debuffs are in `design/type-system.md`. Bios, voice lines and sensitivity rules come from `research/character-copy.md`.
 
 The **Based on** line is for the design team only. It never appears in the shipped UI.
+
+**Input notation** (numpad, with the character facing right):
+
+```
+7 8 9     4 = back     6 = forward     2 = down
+4 5 6     236 = quarter-circle forward     214 = quarter-circle back
+1 2 3     623 = forward, down, down-forward     41236 = half-circle forward
+P = punch   K = kick   (L/M/H = light/medium/heavy)
+```
 
 ---
 
@@ -16,39 +25,63 @@ The **Based on** line is for the design team only. It never appears in the shipp
 | Alt name / nickname | |
 | Based on (internal) | |
 | Faction | |
-| Types | <Type 1> / <Type 2 or none> |
-| Class / role | e.g. Summoner, Tank, Escape Artist |
-| Home arena | |
+| Type / flavour type | |
+| Archetype | Rushdown, Zoner, Grappler, All-rounder, Stance, Puppet, Setplay or Counter |
+| Home stage | |
 
 **Bio** (60–100 words, game-manual voice):
 
 ## 2. Taglines
 
 - **Main tagline** (character-select screen):
-- **Alternates** (2–3, for marketing and variants):
+- **Alternates** (2–3):
 - **Loading-screen tip:**
 
-## 3. Stats
+## 3. Profile
 
-The six stats must add up to 36 (boss characters can go over).
+**Character-select ratings** (1–5):
 
-| Awaam | Muscle | Cover | Rhetoric | Thick Skin | Speed | Total |
-|---|---|---|---|---|---|---|
-| | | | | | | 36 |
+| Power | Speed | Range | Defence | Difficulty |
+|---|---|---|---|---|
+| | | | | |
 
-**Why these numbers:** one line.
+| Field | Value |
+|---|---|
+| Awaam (health) | 900–1,100 |
+| Walk speed | Slow / Medium / Fast |
+| Dash | |
+| Jump | |
+| **Unique gauge** | Name, how it fills, what it powers |
+
+**Game plan:** 2–3 lines on how this character wins.
 
 ## 4. Moveset
 
-Four moves and one Signature. Every move needs an **Anchor**: the real, documented moment it's based on.
+Every move needs an **Anchor**: the real, documented moment it's based on.
 
-| Move | Type | Category | Power | Accuracy | Uses | Effect | Anchor |
-|---|---|---|---|---|---|---|---|
-| | | Power / Rhetoric / Status | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| ★ **Signature** | | | | | 1 per battle | | |
+**Specials**
+
+| Move | Input | Type | What it does | EX version (½ bar) | Anchor |
+|---|---|---|---|---|---|
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+
+**Super and Ultimate**
+
+| Move | Input | Cost | Type | What it does | Anchor |
+|---|---|---|---|---|---|
+| **Super** | | 1 bar | | | |
+| ★ **Ultimate** (cinematic) | | 3 bars | | | |
+
+**Other moves**
+
+| Move | Input | What it does |
+|---|---|---|
+| Unique command normal(s) | | |
+| Throw | | |
+| Taunt | | |
 
 ## 5. Abilities
 
@@ -57,18 +90,18 @@ Four moves and one Signature. Every move needs an **Anchor**: the real, document
 
 ## 6. Matchups
 
-**From types** (work it out from the chart):
-- Takes ×2 or more from:
-- Resists (×½ or less):
-- Strong attacking into:
+**From type:**
+- Takes super-effective damage from:
+- Resists:
+- Super-effective attacking into:
 
-**Rivals:** a character-specific modifier plus a two-line exchange before the battle.
+**Rivals and key matchups**
 
-| Rival | Modifier | Pre-battle exchange |
-|---|---|---|
-| | | |
+| Opponent | Who's favoured, and why | Intro exchange | Win quote |
+|---|---|---|---|
+| | | | |
 
-**Allies** (tag-team bonus if they're on the same team):
+**Generic win quotes** (3, for everyone else):
 
 ## 7. Visual design
 
@@ -77,36 +110,40 @@ Four moves and one Signature. Every move needs an **Anchor**: the real, document
 - **Outfit:**
 - **Signature props:**
 - **Exaggerations** (only chosen features and props; no body or health jokes):
-- **Expressions** (at least 4):
+- **Alternate colours** (4, each a joke):
 
 **Animations**
 
 | State | Description |
 |---|---|
-| Idle | |
-| Attack | |
-| Signature | |
-| Hit | |
+| Stance / idle | |
+| Walk | |
+| Block | |
+| Hit / dizzy | |
 | Knocked out | |
-| Victory | |
+| Intro | |
+| Victory pose (×2) | |
+
+**Home stage:** setting, background characters and hazard.
 
 ## 8. Audio
 
 - **Voice direction** (use an impressionist, never an AI voice clone):
-- **Theme motif:**
+- **Stage theme:**
 - **Signature sound effects:**
+- **Announcer name call:**
 
 **Voice lines** (Roman Urdu with an English gloss)
 
 | Trigger | Line |
 |---|---|
 | Select | |
-| Move use | |
-| Signature | |
-| Hit | |
-| Low Awaam | |
+| Round start | |
+| Special call-outs (one per special) | |
+| Super | |
+| Ultimate | |
+| Hit taken / dizzy | |
 | Knocked out | |
-| Victory | |
 | Taunt | |
 
 ## 9. Sensitivity and fact-check

@@ -10,11 +10,11 @@
 | Alt name / nickname | "Bhai-Fi" |
 | Based on (internal) | Altaf Hussain, MQM founder and leader of MQM-London |
 | Faction | London Office (MQM-Landline) |
-| Types | **Mic / Jalsa** |
-| Class / role | Remote Summoner |
-| Home arena | Karachi. He fights from a picture-in-picture window and never sets foot on the battlefield. |
+| Type / flavour type | **Mic** / Jalsa |
+| Archetype | Zoner / Stance |
+| Home stage | Line One: a Karachi rally ground at night |
 
-**Bio.** He founded his party and has been in London since 1992, and he runs it by telephone and nothing else. His call-in addresses are legendary: they last for hours, while crowds in Karachi stand in disciplined silence as he sings, sobs, changes voices and sometimes changes his mind. A 2015 court order bars Pakistani media from airing him, so in the game he is muted on state TV and loud everywhere else. His old party broke away in 2016. London Office kept the phone.
+**Bio.** He founded his party and has been in London since 1992, and he runs it by telephone and nothing else. He doesn't come to the fight: he is beamed in as a live hologram, tethered by a phone cord that runs all the way off-screen. His call-in addresses are legendary: they last for hours, while crowds stand in disciplined silence as he sings, sobs, changes voices and sometimes changes his mind. A 2015 court order bars Pakistani media from airing him. In this game he is muted on state TV and loud everywhere else.
 
 ## 2. Taglines
 
@@ -23,71 +23,110 @@
   - "Your call is important to him. Please hold."
   - "Banned on every channel. Heard on all of them."
   - "6,000 km away. Speech length: also roughly 6,000 km."
-- **Loading-screen tip:** "Altaf Hello-sain's Phone-In Address runs for 2–5 turns. Bring snacks. Do not leave the jalsa."
+- **Loading-screen tip:** "Interrupt Altaf Hello-sain during his Phone-In Address and the line drops. Good luck getting close enough."
 
-## 3. Stats
+## 3. Profile
 
-| Awaam | Muscle | Cover | Rhetoric | Thick Skin | Speed | Total |
-|---|---|---|---|---|---|---|
-| 6 | 3 | 7 | 10 | 7 | 3 | **36** |
+**Character-select ratings**
 
-**Why these numbers:** his Rhetoric is the best in the game. He is hard to reach (Cover 7) because he is in another country. His Speed is low because no speech of his has ever been short.
+| Power | Speed | Range | Defence | Difficulty |
+|---|---|---|---|---|
+| 3 | 1 | 5 | 3 | 4 |
+
+| Field | Value |
+|---|---|
+| Awaam (health) | 950 |
+| Walk speed | The slowest in the cast |
+| Dash | A short signal-hop: the hologram glitches a little way forward or back |
+| Jump | Floaty and low, with the cord trailing behind |
+| **Unique gauge** | **Call Duration** (5 levels). It fills while he's in the Phone-In Address stance and when Hello? Hello? rings hit. Rehnuma Chahiye spends it, and it boosts his Super. A Dropped Call resets it to 0. |
+
+**Game plan:** keep the opponent away with sound-ring projectiles, find a safe moment to start a Phone-In Address and build Call Duration, then cash it in with Rehnuma Chahiye when they jump at him. He loses when a rushdown character gets in close and catches him mid-speech.
 
 ## 4. Moveset
 
-| Move | Type | Category | Power | Accuracy | Uses | Effect | Anchor |
-|---|---|---|---|---|---|---|---|
-| **Hello? Hello?** | Mic | Status | – | – | 20 | +1 Rhetoric. He moves last next turn while he checks the line. | Famously opened his calls by checking whether the crowd could hear him. |
-| **Phone-In Address** | Mic | Rhetoric | 40 per turn | 100% | 5 | He is locked in for 2–5 turns (random) and hits every turn. The opponent loses 1 Speed each turn as the crowd stands frozen, and can't switch out while it runs. | Hours-long telephone speeches to silent, disciplined crowds. |
-| **Ek Gaana Sunata Hoon** (Let me sing you a song) | Mic | Status | – | 100% | 10 | Adds 2 turns to an active Phone-In Address and heals 15% Awaam as the crowd sings along. Fails if no Phone-In is running. | He sang during his addresses. |
-| **Rehnuma Chahiye** (We want the leader) | Jalsa | Power | 70 | 90% | 10 | Gains +20 power for each turn the current Phone-In has been running, up to 150. | The party slogan "Hum ko manzil nahin, rehnuma chahiye". |
-| ★ **Line One from London** | Mic | Rhetoric | 120 | 100% | 1 per battle | Turn 1: he goes off-screen ("Connecting to London…") and can't be targeted. Turn 2: he strikes. Ignores Load-shedding. | In self-exile in London since 1992 and still addressing Karachi. |
+**Specials**
+
+| Move | Input | Type | What it does | EX version (½ bar) | Anchor |
+|---|---|---|---|---|---|
+| **Hello? Hello?** | 236P | Mic | A sound-ring projectile. L/M/H set the speed. | Fires two rings, the second one delayed ("…awaaz aa rahi hai?"). | He famously opened calls by checking the crowd could hear him. |
+| **Phone-In Address** | 214K | Mic | Enters the speech stance. Call Duration fills by 1 level every 1.5 s, and any opponent within mid range walks 20% slower. From the stance, **P** = *Ek Gaana*: musical notes roll along the ground and hit low. **K** = hang up and leave the stance. | Starts with 1 level of Call Duration and absorbs one hit. | Hours-long telephone speeches to silent, disciplined crowds. |
+| **Rehnuma Chahiye** (We want the leader) | 623P | Jalsa | A crowd surges up from the floor: an anti-air. Spends all Call Duration, and each level adds one hit and more damage. | Invincible on startup. | The party slogan "Hum ko manzil nahin, rehnuma chahiye". |
+| **Long-Distance Cord** | 41236K | Mic | The phone cord lashes out across the screen like a lasso and drags the opponent back to him. | Also leaves the opponent **Muted**: nobody else talks while he's talking. | 34 years of running the party down a phone line. |
+
+**Super and Ultimate**
+
+| Move | Input | Cost | Type | What it does | Anchor |
+|---|---|---|---|---|---|
+| **Ab Main Aap Ko Ek Gaana Sunata Hoon** (Now let me sing you a song) | 236236P | 1 bar | Mic | He sings, and musical notes rain across the whole screen for 8 hits. Each level of Call Duration adds 2 more hits. | He sang during his addresses. |
+| ★ **Line One from London** | 236236K | 3 bars | Mic | Cinematic. The hologram cuts to "Connecting to London…" with a dial-up spinner. A giant receiver drops from the top of the screen and traps the opponent at a rally. They have to stand in silence while a time-lapse clock runs through **4h 37m** of speech. The crowd's final chant knocks them out. | In London since 1992; his marathon speeches. |
+
+**Other moves**
+
+| Move | Input | What it does |
+|---|---|---|
+| **Line Check** (command normal) | 6P | He taps the receiver and an overhead sound-blip hits opponents who are crouch-blocking. |
+| **Please Hold** (throw) | Forward or back + LP+LK | He holds the receiver to the opponent's ear and hold music plays. They stagger away, dizzy. |
+| **Prepaid Call** (taunt) | Taunt button | "Yeh prepaid call hai, jaldi khatam karna hai." (This is a prepaid call, I have to wrap up quickly.) Gives +1 Call Duration, but it takes a long time to recover from. |
 
 ## 5. Abilities
 
-- **Passive: Already Banned.** He is immune to the **Muted** status, and his Mic moves ignore **Load-shedding** because the call is on a UK line. *Anchor:* the 2015 Lahore High Court order barring Pakistani media from airing him.
-- **Weakness: Dropped Call.** At the end of every third turn there's a 30% chance the line drops. Any Phone-In Address in progress ends at once and his Rhetoric boosts reset. *Anchor:* hours-long calls on international lines.
+- **Passive: Already Banned.** He can't be **Muted**. During **Load-shedding**, his Call Duration fills twice as fast because nobody can leave a rally in the dark. *Anchor:* the 2015 Lahore High Court order barring Pakistani media from airing him.
+- **Weakness: Dropped Call.** If a counter-hit lands on him while he's in the Phone-In stance, the line drops. Call Duration resets to 0 and he is stunned for 1 second ("tring… tring…"). *Anchor:* hours-long calls on international lines.
 
 ## 6. Matchups
 
-**From types (Mic / Jalsa):**
-- **Takes ×2 from:** Jalsa ("the street he built walked away") and Khandaan.
-- **Resists (×½):** Jor-Tor and Mic. You can't leak a man who says everything live.
-- **Neutral (×1):** Khaki and Qanoon. Each of his two types cancels the other out.
-- **Strong attacking into:**
-  - With Mic moves: Khaki and Jor-Tor.
-  - With Jalsa moves: Qanoon and Mic.
+**From type (Mic):**
+- **Takes super-effective damage from:**
+  - Qanoon: contempt of court, plus the media ban.
+  - Jalsa: the street he built walked away.
+- **Resists:** Khaki and Jor-Tor, because they can't reach London.
+- **Super-effective attacking into:** Khaki and Jor-Tor with his Mic moves, and Qanoon and Mic with Rehnuma Chahiye, which is Jalsa type.
 
-**Rivals:**
+**Rivals and key matchups**
 
-| Rival | Modifier | Pre-battle exchange |
-|---|---|---|
-| Mustafa Kamaal-Hai (MQM-Partially) | His Jalsa moves deal ×½: they kept the crowd and he kept the phone. | **Altaf:** "Hello? Mustafa? Mere hi microphone se mere khilaaf?" (Hello? Mustafa? Against me, on my own microphone?)<br>**Kamaal:** "Bhai, ab microphone ka bill hum bharte hain." (Bhai, we pay the mic bill now.) |
-| Farooq Ek-Ghanta Sattar (MQM-Partially) | His Jalsa moves deal ×½. | **Farooq:** "Bhai, main siyasat chhor raha hoon." (Bhai, I'm quitting politics.)<br>**Altaf:** "Theek hai. Ek ghante baad call karna." (Fine. Call me back in an hour.) |
-| Kamran Khan Tessurili (MQM-Partially) | His Jalsa moves deal ×½. | **Tessurili:** "Governor House mein aap ka swagat hai!" (Welcome to Governor House!)<br>**Altaf:** "Main to London mein hoon. Speaker pe daal do." (I'm in London. Put me on speaker.) |
+| Opponent | Who's favoured, and why | Intro exchange | Win quote |
+|---|---|---|---|
+| **Mustafa Kamaal-Hai** (MQM-P) | Even. Rehnuma Chahiye does ×0.8 against MQM-P characters: they kept the crowd and he kept the phone. | **Altaf:** "Hello? Mustafa? Mere hi microphone se mere khilaaf?" (Hello? Mustafa? Against me, on my own microphone?)<br>**Kamaal:** "Bhai, ab microphone ka bill hum bharte hain." (Bhai, we pay the mic bill now.) | "Bill tum bharo. Bolunga main." (You pay the bill. I'll do the talking.) |
+| **Farooq Ek-Ghanta Sattar** (MQM-P) | Altaf favoured. Same ×0.8 on Rehnuma Chahiye. | **Farooq:** "Bhai, main siyasat chhor raha hoon." (Bhai, I'm quitting politics.)<br>**Altaf:** "Theek hai. Ek ghante baad call karna." (Fine. Call me back in an hour.) | "Ek ghanta ho gaya. Wapas aa jao." (It's been an hour. Come on back.) |
+| **Imran U-Khan** | Imran favoured: he's a Jalsa-type rushdown who gets through the sound-rings. | **Imran:** "Main tumhein rulaunga!" (I'll make you cry!)<br>**Altaf:** "Rona to mera kaam hai." (Crying is my department.) | "126 din container pe? Main 34 saal se phone pe hoon." (126 days on a container? I've been on the phone for 34 years.) |
+| **Qazi Faisla Isa** | Isa favoured: Qanoon is super-effective against Mic. | **Isa:** "Aap ki baat record par nahin aayegi." (Nothing you say will go on the record.)<br>**Altaf:** "Record ki zaroorat nahin. Main live hoon." (Who needs a record? I'm live.) | "Faisla aap ka. Microphone mera." (The verdict is yours. The microphone is mine.) |
 
-**Allies:** none in Pakistan. His tag-team partner is an NPC, the **Loyal Speakerphone**, which doesn't fight but gives +1 Awaam to any ally on the same team.
+**Generic win quotes:**
+- "Mujhe dekhne ke liye TV mat kholo. Woh band hai." (Don't switch on the TV to see me. It's banned.)
+- "Agli call kal. Isi waqt. Paanch ghante." (Next call tomorrow. Same time. Five hours.)
+- "Aap ki call ka shukriya. Bill Karachi bhej diya hai." (Thanks for calling. The bill's been sent to Karachi.)
 
 ## 7. Visual design
 
-- **Silhouette:** a small seated figure in an armchair beside a huge rotary phone. A very long phone cord trails out of frame. It should read instantly even in black and white.
-- **Battle presentation:** he never stands on the battlefield. A giant phone receiver stands on a Karachi stage, and he appears in a picture-in-picture window above it with VHS scanlines. Through the window behind him: London drizzle and a red phone box.
-- **Palette:** drizzle grey and phone-box red, the faction colours.
-- **Outfit:** a cosy cardigan over a shirt.
-- **Signature props:** a rotary phone with an impossibly long cord stretching across a world map, a headset mic, and a mug of tea.
+- **Silhouette:**
+  - A cardigan-wearing figure holding a rotary-phone receiver to his ear.
+  - A thick coiled cord runs from the receiver off the edge of the screen on his starting side, all the way to London. It stretches and sags as he moves.
+- **Rendering:** a live hologram, slightly see-through, with VHS scanlines and a "LIVE • LONDON" tag floating above him.
+- **Palette:** drizzle grey and phone-box red.
+- **Outfit:** a cosy cardigan over a shirt, and a headset mic as well as the handset.
+- **Signature props:** the rotary phone and its endless cord, and a mug of tea that appears in idle animations.
 - **Exaggerations:** oversized glasses and a bigger moustache. Both are chosen features, so they're fair game.
-- **Expressions:** a conspiratorial whisper, a sudden roar, tearful, mid-song with eyes closed, and squinting at a bad line.
+- **Alternate colours:**
+  1. *Night Call*: green CRT monochrome.
+  2. *Calling Card*: gold-foil prepaid card.
+  3. *Hold Music*: lift-music lavender.
+  4. *Static*: black-and-white snow.
 
 **Animations**
 
 | State | Description |
 |---|---|
-| Idle | He paces inside the window while the cord slowly wraps around the armchair. |
-| Attack | The window grows to stadium-screen size, and crowd sprites freeze mid-motion. |
-| Signature | The window goes black with "Connecting to London…" and an old dial-up spinner, then bursts back to fill the screen. |
-| Hit | The picture breaks up into static and the audio crackles. |
-| Knocked out | The screen shows "Call Ended", with a call timer reading 4h 37m. |
-| Victory | He sings into the receiver while the crowd stays frozen and doesn't dare move. |
+| Stance / idle | He paces with the receiver, sips tea, and taps the handset now and then: "Hello?" |
+| Walk | A slow shuffle with the cord dragging behind. |
+| Block | He holds the receiver up like a shield and it fizzes with static. |
+| Hit / dizzy | The picture breaks up. Instead of dizzy stars, a **buffering spinner** circles his head. |
+| Knocked out | A "Call Ended" card with a timer reading 4:37:12, then a dial tone. |
+| Intro | Dial-up handshake noise while the hologram builds itself line by line. |
+| Victory pose 1 | He sings into the receiver with his eyes closed. |
+| Victory pose 2 | He raises one hand for silence and the background crowd falls silent instantly. |
+
+**Home stage, Line One:** a Karachi rally ground at night. There are loudspeaker stacks and a huge screen showing his face. The crowd in the background stands perfectly still and silent, and a clock tower behind them runs visibly fast. The default hazard is Load-shedding.
 
 ## 8. Audio
 
@@ -95,22 +134,25 @@
   - Theatrical, with long pauses, swinging from a whisper to a shout without warning, and the occasional burst into song.
   - **All lines go through a telephone filter** (narrow EQ and light crackle).
   - Cast a voice impressionist, never an AI voice clone.
-- **Theme motif:** a hold-music arrangement of a rousing anthem-style melody, like lift music. When a Jalsa move lands, it cuts to full dhol and crowd.
-- **Signature sound effects:** rotary-dial clicks used as a rhythm, international-call pips, a dial tone, line crackle, and an old answering-machine beep.
+- **Stage theme:** a lift-music version of a rousing anthem-style melody. It switches to full dhol and crowd when Call Duration reaches 5, and in the final round.
+- **Signature sound effects:** rotary-dial clicks used as a rhythm, international-call pips, a dial tone, and line crackle. The sound-rings "ring" like an old phone.
+- **Announcer name call:** "ALTAF… *[phone rings]* …HELLO-SAIN!"
 
 **Voice lines**
 
 | Trigger | Line |
 |---|---|
 | Select | "Hello? Hello? Saathiyon, awaaz aa rahi hai?" (Hello? Hello? Comrades, can you hear me?) |
-| Move use (Phone-In Address) | "Ab main aap ko ek baat batata hoon… phir doosri… phir teesri." (Now let me tell you one thing… then a second… then a third.) |
-| Signature | "London se, line number ek." (From London, line one.) |
-| Hit | "Line mein disturbance hai." (There's disturbance on the line.) |
-| Low Awaam | "Koi hai? Karachi? Koi to bolo!" (Anyone there? Karachi? Somebody say something!) |
+| Round start | "Ab main aap ko ek baat batata hoon… phir doosri… phir teesri." (Let me tell you one thing… then a second… then a third.) |
+| Hello? Hello? | "Hello?" / "Hello? Hello?" / "Awaaz aa rahi hai?" (Can you hear me?) |
+| Phone-In Address | "Khamoshi! Main bol raha hoon." (Silence! I'm speaking.) |
+| Rehnuma Chahiye | Crowd chant: "Rehnuma chahiye!" (We want the leader!) |
+| Long-Distance Cord | "Idhar aao. Line pe raho." (Come here. Stay on the line.) |
+| Super | "Ab main aap ko ek gaana sunata hoon." (Now I'll sing you a song.) |
+| Ultimate | "London se… line number ek." (From London… line one.) |
+| Hit taken / dizzy | "Line mein disturbance hai." (There's disturbance on the line.) |
 | Knocked out | "Hello?… Hello?…" *[dial tone]* |
-| Victory | "Ab main aap ko ek gaana sunata hoon." (Now I'll sing you a song.) *[the hold music swells]* |
 | Taunt | "Main band hoon? Nahin bhai, TV band hai. Main to bol raha hoon." (I'm banned? No, brother, the TV's switched off. I'm still talking.) |
-| Taunt 2 | "Yeh prepaid call hai, jaldi khatam karna hai." (This is a prepaid call, I have to wrap up quickly.) *[Phone-In gets +2 turns]* |
 
 ## 9. Sensitivity and fact-check
 
@@ -123,5 +165,6 @@
 - **Facts to recheck before release:**
   - The 2015 Lahore High Court media ban is still in force.
   - He is still in London and still leads MQM-London.
-  - "Bhai-Fi" doesn't clash with any existing use of the nickname.
+  - "34 years" is right for the release date (counting from 1992).
+  - The "126 days" figure for Imran's 2014 dharna.
 - **Distribution flag:** the media ban may affect marketing that features him in Pakistan. Check with a lawyer.
