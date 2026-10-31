@@ -4,7 +4,7 @@ A silly, browser-based 2D versus fighting game with caricature parodies of Pakis
 
 | | |
 |---|---|
-| **Status** | Draft v0.3 |
+| **Status** | Draft v0.4. Open decisions are tracked in [DECISIONS.md](./DECISIONS.md) |
 | **Owner** | TBD |
 | **Last updated** | 2026-10-31 |
 | **Platform** | **Mobile web** (Android Chrome first, then iOS Safari). Desktop browsers also supported |
@@ -28,7 +28,7 @@ The pitch: **"Pakistani politics already looks like a fighting game. We added he
 4. **Runs on budget Android phones** at a smooth frame rate, with a small download.
 5. **Shareable and silly.** Short, funny matches (60–90 seconds) that people want to screenshot or clip for WhatsApp, TikTok and X.
 6. **Even-handed satire.** Every major party gets roasted equally. The game doesn't take sides.
-7. **Play friends online** through a room link, soon after the first release.
+7. **Play a friend on another phone, in the MVP.** At minimum, two phones on the same Wi-Fi must work perfectly. Over the internet through a shared link, it should work on most connections.
 
 ### Non-goals (for now)
 - **App store apps.** Not planned. If the project grows, Capacitor can wrap the same code later (see §10).
@@ -107,7 +107,7 @@ The pitch: **"Pakistani politics already looks like a fighting game. We added he
 | Versus CPU | MVP | **The main mode on phones.** 3 difficulty levels, rule-based AI |
 | Training | MVP | Dummy opponent, hitbox display, input display |
 | Local Versus (2P) | MVP | One keyboard or two gamepads on desktop. On phones, best effort on a tablet with split-screen buttons |
-| Online friend match | v1.1 | Tap "Challenge a friend" to get a link to share on WhatsApp. Peer-to-peer WebRTC. Delay-based netcode first, rollback later |
+| **Friend match (two devices)** | **MVP** | Tap "Challenge a friend" to get a link or QR code. Your friend opens it on their phone. Works on the same Wi-Fi and, for most connections, over the internet. Peer-to-peer WebRTC. Netcode approach: see DECISIONS.md |
 | Arcade ("Election Campaign") | v1.2 | Beat 5 opponents, then the secret boss. Ending card per character ("You won the election… recount pending") |
 | Online quick match | Maybe later | Needs a matchmaking server. Only worth it if the game takes off |
 
@@ -250,7 +250,7 @@ Even as a fun side project, these rules matter. Political satire of public figur
 - **Input is abstracted.** Touch, keyboard and gamepad all produce the same per-frame input bitmask, so the game logic never knows which device is in use.
 - **Data-driven characters.** Move frame data, hitboxes and properties live in JSON per character, so they can be tuned without code changes.
 - **Rendering and audio are a thin Phaser layer** over the game state.
-- **Netcode (v1.1):** peer-to-peer WebRTC data channels using PeerJS, with room links. Start with delay-based input sync. Because the simulation is deterministic, upgrading to rollback later doesn't require a rewrite.
+- **Netcode (MVP):** peer-to-peer WebRTC data channels using PeerJS, with room links. Both phones run the same deterministic simulation and exchange only inputs. Start with delay-based input sync, plus a checksum to detect if the two phones disagree. Because the simulation is deterministic, upgrading to rollback later doesn't require a rewrite. **Online play is built into the prototype from M0, not added at the end.**
 
 ### 9.3 Stack (decided)
 
@@ -273,11 +273,11 @@ This is a fun project, so milestones are about scope rather than deadlines.
 
 | Milestone | Scope | Exit criteria |
 |---|---|---|
-| **M0: Prototype** | 2 placeholder (grey-box) fighters, 1 stage, touch controls plus keyboard, hitboxes, health, rounds, simple CPU | Feels fun on a **real budget Android phone**, and playtesters want "one more round" |
+| **M0: Prototype** | 2 placeholder (grey-box) fighters, 1 stage, touch controls plus keyboard, hitboxes, health, rounds, **two-phone play over Wi-Fi**, simple CPU | Feels fun on a **real budget Android phone**, two friends can play each other on two phones, and playtesters want "one more round" |
 | **M1: Pipeline proven** | Puppet and hitbox editor. Body rigs A–D with shared normals. **4 fully finished fighters** (one per rig), including Ultimates and voices. 1 finished stage, menus, disclaimer, PWA | We know what one fighter really costs to make. A shareable link that friends actually play |
 | **M2: Content production** | The remaining 16 fighters, made in batches of 4 (balanced across parties). 4 stages, rival intros, result headlines, taunts, alternate colours | Each batch is playtested and checked against §8 before the next batch starts |
 | **MVP launch** | **20 fighters**, 4 stages, CPU, Training, local versus, English and Urdu | Smooth on the reference phone. Every fighter has passed the content review |
-| **v1.1** | Online friend match through a WhatsApp link | Playable between two phones on 4G |
+| **v1.1** | Internet play hardening: a TURN relay for strict mobile networks, and rollback netcode if delay feels bad | Playable between two phones on 4G in different cities |
 | **v1.2** | Arcade mode, secret boss (if cleared), bench fighters as topical drops | — |
 | **Someday, maybe** | Rollback netcode, quick match, Capacitor app store builds | Only if people love it |
 
@@ -303,7 +303,7 @@ No hard targets. It's a silly game. Signs that it's working:
 | Perceived partisanship leads to backlash | Medium | Medium | Even-handed roster and equal joke intensity |
 | Legal complaint, or the site gets blocked | Low–Medium | High | Rules in §8, hosting outside Pakistan, takedown process, legal review if it grows |
 | Mobile browser quirks (audio unlock, fullscreen, iOS Safari) | High | Low | "Tap to start" screen, test on both Android Chrome and iOS Safari early |
-| Online play is complex | Medium | Medium | Deterministic simulation from day one. Delay-based netcode before rollback |
+| Online play is complex, and it's now in the MVP | Medium | High | Deterministic simulation from day one. Network play in the prototype, so problems show up early. Delay-based before rollback. Same-Wi-Fi first, then the internet |
 | Political events date the jokes quickly | High | Low | Data-driven quips, so voice lines and win quotes are easy to update |
 
 ## 13. Open questions
