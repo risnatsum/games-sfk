@@ -15,7 +15,7 @@ New to a term? See [GLOSSARY.md](./GLOSSARY.md).
 | D1 | Platform | **Mobile web**, played in the phone's browser | Most of the audience is on Android phones. A link has no install step |
 | D2 | Engine | **Phaser** | Best web performance and community, and it works with plain JavaScript |
 | D3 | Language | **JavaScript** (not TypeScript) | Your preference. It's simpler to read and learn |
-| D4 | Roster size | **20 fighters at MVP** | The content drives engagement (see [ROSTER.md](./ROSTER.md)) |
+| D4 | Roster | **11 fighters + final boss at MVP**, from [design/characters/](../design/characters/). Replaces the earlier 20-fighter roster | The content drives engagement |
 | D5 | Multiplayer | **The MVP must let two friends play on two phones**, at least over the same Wi-Fi | That's the core social experience |
 | D6 | App stores | Not planned. Capacitor later, if ever | Keeps the focus on the game |
 
@@ -96,10 +96,10 @@ These come first, because they shape everything else.
 - **Recommendation:** store positions as **whole numbers in "subpixels"** (e.g. 1 pixel = 100 units). Whole-number math is identical on every device.
 
 ### 1.5 Animation technology and tools ⬜
-**Why it matters:** with 20 fighters, animation is the biggest cost (PRD §5.3).
+**Why it matters:** with a full roster, animation is the biggest cost (PRD §5.3).
 - **A. Our own small puppet and hitbox editor** in the browser *(recommended)*. Tailored to us, free, and building it is a great learning project.
 - **B. Spine** (paid, about US$70 for the basic edition). A professional, polished tool, and Phaser has official support. Everyone who edits animations needs a licence.
-- **C. Sprite sheets** drawn frame by frame. Simplest technically, but far too much drawing for 20 fighters.
+- **C. Sprite sheets** drawn frame by frame. Simplest technically, but far too much drawing for a full roster.
 
 ### 1.6 Testing strategy ⬜
 - **Automated tests** (Vitest) for the fight simulation: *"after this punch hits, health is 90"*. They catch bugs before you do.
