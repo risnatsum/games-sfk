@@ -1,20 +1,50 @@
 # Character Template
 
-**Name:**
-**Based on:** (internal only)
+Copy to `design/characters/<parody-name>.md`. Types are in `design/type-system.md`. Say the joke and stop.
+
+---
+
+# <Parody Name>
+
+**Based on:** (internal only, never in the game)
 **Type:**
-**Style:** (rushdown, zoner, grappler, etc.)
-**Tagline:**
+**Style:** rushdown, zoner, grappler, whatever fits
+**Tagline:** (character-select screen)
+**Alt tagline:**
 
-**Look:**
-**Voice:**
+Two or three sentences of bio.
 
-**Moves**
-- Special 1:
-- Special 2:
-- Special 3:
-- Super:
-- Ultimate:
+## Look
+- **Outfit:**
+- **Props:**
+- **Intro:**
+- **Victory:**
+- **KO:**
+- **Stage:**
 
-**Rival:**
-**Win quote:**
+## Audio
+- **Voice:** how they sound
+- **Lines:** four to six. Gloss only what a non-Urdu speaker would miss.
+- **Music:**
+- **Sounds:**
+- **Announcer:** how their name gets shouted
+
+## Moves
+One line each.
+- **Special:**
+- **Special:**
+- **Special:**
+- **Special:** (optional)
+- **Throw:** (only if it's funny)
+- **Super:**
+- **Ultimate:**
+
+## Abilities
+- **Passive:** what makes them play differently
+- **Weakness:** how you beat them
+
+## Matchups
+- **Weak to:** (from the chart)
+- **Strong against:**
+- **Rival:** one or two, each with a two-line exchange
+- **Win quote:**
