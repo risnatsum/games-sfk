@@ -25,16 +25,22 @@ New to a term? See [GLOSSARY.md](./GLOSSARY.md).
 
 These come first, because they shape everything else.
 
-### 0.1 Your role and how deep you want to learn 🟡
+### 0.1 Your role and how deep you want to learn ✅
+**Decided: B, gradual co-builder.**
+
 **Why it matters:** this decides how I explain, how much code you write, and how fast we go.
 - **A. Tester and reviewer.** I write the code. You play every build, and I explain each piece in plain language. Fastest.
 - **B. Gradual co-builder** *(recommended)*. I build the foundations and explain them. You make small, safe changes early (like tuning a punch's damage or writing a fighter's lines in a data file), then bigger ones over time. You learn by doing, without being blocked.
 - **C. You write most of it.** I guide and review. Slowest, deepest learning.
 
-### 0.2 Your coding background 🟡
+### 0.2 Your coding background ✅
 **Why it matters:** so I don't over- or under-explain. There's no wrong answer.
 
-### 0.3 The test loop: how you'll play each build 🟡
+**Answer: a little** (some HTML, formulas or tutorials). Explanations will cover the basics of JavaScript, files and Git as they come up, without assuming prior knowledge.
+
+### 0.3 The test loop: how you'll play each build ✅
+**Decided: auto-deploy previews. We'll use Cloudflare** because its free tier has no bandwidth cap, which matters if a fad goes viral. Netlify is the fallback. It's set up as soon as the project skeleton exists.
+
 **Why it matters:** game development is a loop of *build → play → feel → adjust*, and the faster the loop, the better the game. You're the tester, so every change should be **one tap away on your phone**.
 - **A. Auto-deploy each push to a web URL** *(recommended)*. Netlify or Cloudflare Pages build the game automatically and give each branch its own preview link. You open it on your phone, and so can your friend. Free. You'd create the account and connect the GitHub repo (about 5 minutes, and I'll guide you).
 - **B. GitHub Pages.** Also free and automatic, but it needs the repo to be public (or a paid GitHub plan), and there's only one URL with no per-branch previews.
@@ -42,10 +48,20 @@ These come first, because they shape everything else.
 
 **Note:** preview URLs are hard to guess, but technically public. Fine for a parody game in testing, but don't post them publicly until the content review (PRD §8) is done.
 
-### 0.4 Test devices 🟡
+### 0.4 Test devices ✅
 **Why it matters:** we tune performance and controls against real devices, and Android Chrome and iPhone Safari behave differently, especially for audio, fullscreen and networking.
 
-### 0.5 Working rhythm ⬜
+**Answer: iPhones** (you and your friend). What that means:
+- **iPhone Safari becomes our primary *test* platform.** Android remains the main *audience*.
+- iPhone Safari limitations we must design around:
+  - **No fullscreen button for games.** The fix is "Add to Home Screen", which runs the game full-screen like an app. We'll prompt for it.
+  - **No orientation lock.** We show a "rotate your phone" screen in portrait.
+  - **No vibration** (`navigator.vibrate` isn't supported), so haptics only work on Android.
+  - **Audio only starts after a tap**, so we need the "Tap to start" screen.
+  - The swipe-from-edge gestures and the bottom home bar can steal touches, so controls must keep away from the screen edges.
+- **Risk:** iPhones are much faster than budget Androids, so the game could feel smooth for us and be sluggish for the real audience. **Mitigation:** I'll watch performance budgets in code, and **before the public launch, test on at least one budget Android phone** (borrow one, or buy a cheap one for about PKR 25–35k).
+
+### 0.5 Working rhythm ✅
 **Recommendation:** small playable increments. Every step ends with:
 1. A link you can play.
 2. A short "what changed and why" note, written to teach.
