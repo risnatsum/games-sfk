@@ -7,3 +7,4 @@ Browser-based 2D fighting game featuring caricature parodies of Pakistani politi
 - [Decision log](docs/DECISIONS.md): every decision, with the reasoning
 - [Game-dev glossary](docs/GLOSSARY.md)
 - [Open-source engine options](docs/ENGINES.md)
+- [Pakistan political landscape research](research/pakistan-political-landscape.md)
