@@ -4,12 +4,12 @@ A silly, browser-based 2D versus fighting game with caricature parodies of Pakis
 
 | | |
 |---|---|
-| **Status** | Draft v0.2 |
+| **Status** | Draft v0.3 |
 | **Owner** | TBD |
 | **Last updated** | 2026-10-31 |
 | **Platform** | **Mobile web** (Android Chrome first, then iOS Safari). Desktop browsers also supported |
 | **Engine** | **Phaser + plain JavaScript + Vite** (decided, see [ENGINES.md](./ENGINES.md)) |
-| **Project spirit** | A fun side project. Keep scope small and the jokes good. It may grow |
+| **Project spirit** | A fun side project, and probably a fad, which is fine. **The content is the product:** 20 fighters, lots of moves and jokes. Keep the tech simple |
 
 ---
 
@@ -24,10 +24,11 @@ The pitch: **"Pakistani politics already looks like a fighting game. We added he
 ### Goals
 1. **Instantly playable from a shared link.** Open the link on a phone and be in a match within 10 seconds, with no account, download or app store.
 2. **Feels good on a touchscreen.** On-screen controls that are easy to learn, with special moves that don't need precise joystick motions.
-3. **Runs on budget Android phones** at a smooth frame rate, with a small download.
-4. **Shareable and silly.** Short, funny matches (60–90 seconds) that people want to screenshot or clip for WhatsApp, TikTok and X.
-5. **Even-handed satire.** Every major party gets roasted equally. The game doesn't take sides.
-6. **Play friends online** through a room link, soon after the first release.
+3. **A big, varied roster: 20 fighters at launch**, each with a unique gimmick, signature moves, a comic-panel Ultimate, and plenty of lines and rival exchanges. This is what drives engagement.
+4. **Runs on budget Android phones** at a smooth frame rate, with a small download.
+5. **Shareable and silly.** Short, funny matches (60–90 seconds) that people want to screenshot or clip for WhatsApp, TikTok and X.
+6. **Even-handed satire.** Every major party gets roasted equally. The game doesn't take sides.
+7. **Play friends online** through a room link, soon after the first release.
 
 ### Non-goals (for now)
 - **App store apps.** Not planned. If the project grows, Capacitor can wrap the same code later (see §10).
@@ -50,7 +51,8 @@ The pitch: **"Pakistani politics already looks like a fighting game. We added he
 
 ### 4.1 Match structure
 - 1v1, **best of 3 rounds**, with a **60-second round timer**. If time runs out, the fighter with more health wins.
-- Health bar per fighter, plus a **"Jalsa Meter"** (super meter) with 3 bars. It fills when you deal or take damage.
+- Health bar per fighter, plus a **"Jalsa Meter"** (super meter) with 3 bars. It fills when you deal or take damage, and a little when you taunt.
+- A **Super** costs 1 bar. A **Jalsa Ultimate** costs 3 bars and plays a short comic-panel cinematic.
 - The round starts with an announcer line (*"Round 1… Dharna shuru!"*). A KO triggers a comedic, non-violent knockout animation: the loser gets "disqualified", "sent into exile", "taken off-air" and so on.
 
 ### 4.2 Controls
@@ -62,16 +64,17 @@ The pitch: **"Pakistani politics already looks like a fighting game. We added he
  │  [P1 health ▓▓▓▓▓]      60      [▓▓▓▓▓ P2 health]        │
  │                                                          │
  │                    (fight area)                          │
- │                                                          │
+ │                                            [taunt]       │
  │     ╭───╮                                  (H)   (S)     │
  │    │  ●  │  ← joystick / d-pad          (L)  (T)  [SUPER]│
  │     ╰───╯                                                │
  └──────────────────────────────────────────────────────────┘
    L = Light   H = Heavy   S = Special   T = Throw
+   SUPER: tap = Super (1 bar), hold = Jalsa Ultimate (3 bars)
 ```
 
 - **Left thumb:** a floating virtual joystick (it appears wherever you touch on the left half), or an optional fixed d-pad. Hold *back* to block and *down* to crouch.
-- **Right thumb:** Light, Heavy, Special and Throw buttons, plus a **Super** button that lights up when the meter has enough bars.
+- **Right thumb:** Light, Heavy, Special and Throw buttons, plus a **Super** button that lights up when the meter has enough bars (tap for Super, hold for the Jalsa Ultimate). A small **Taunt** button sits above them.
 - **Simple specials (default on touch):** **Special** alone, **forward + Special** and **back + Special** give the three special moves. No quarter-circle motions are needed.
 - Buttons are large (at least 56 px), semi-transparent, and give haptic feedback via `navigator.vibrate` where it's supported. Layout and size can be adjusted in settings.
 
@@ -108,30 +111,63 @@ The pitch: **"Pakistani politics already looks like a fighting game. We added he
 | Arcade ("Election Campaign") | v1.2 | Beat 5 opponents, then the secret boss. Ending card per character ("You won the election… recount pending") |
 | Online quick match | Maybe later | Needs a matchmaking server. Only worth it if the game takes off |
 
-## 5. Roster (launch: 6 fighters + 1 boss)
+## 5. Roster and content (launch: 20 fighters + secret boss)
 
-> All names below are **placeholder parodies**. The final names, designs and jokes must pass the content review in §8. Each fighter is an *archetype* that players will recognise, not a copy of a real person's photo, name or official party branding.
+**The content is the product.** Players come back for the fighters, the moves, the jokes and the discoveries, not for deep fighting-game mechanics. Most of the design effort goes here.
 
-| # | Fighter (working name) | Parody party | Archetype and comedy angle | Signature moves (examples) |
-|---|---|---|---|---|
-| 1 | **Kaptaan** | *Tehreek-e-Tabdeeli* (PTT) | Cricketer-turned-politician. Sporty, charismatic, famous for changes of direction | **Bouncer** (cricket-ball projectile), **U-Turn Dash** (dash that reverses direction mid-move), **Container Speech** (super: rises on a container, sound waves stun) |
-| 2 | **Sher Mian** | *Muslim League (Nihari)* (PML-Nihari) | Lahore lion. Loves food, infrastructure and staying abroad | **Motorway Rush** (fast charging lunge), **Nihari Pot Toss** (arcing projectile), **Return from London** (super: leaves the screen, lands from a plane) |
-| 3 | **Jiyala Junior** | *Awami Party Zindabad* (APZ) | Heir of a political dynasty. Inherited charisma, famous slogans | **Zinda Hai!** (one-time revival from KO with low health), **Teer-andaz** (arrow-style projectile), **Sindh Card** (super: a card trick that confuses the opponent) |
-| 4 | **Patang Bhai** | *Muttahida Patang Front* (MPF) | Karachi party. Kites, long-distance phone speeches | **Kite Glide** (aerial float), **Phone-In Address** (long-range delayed hit from a giant phone), **Strike Call** (super: city shuts down and the opponent freezes) |
-| 5 | **Anchor Sahib** | *Breaking News Party* | Not a politician: the TV talk-show host who referees every fight | **Breaking News Ticker** (low sweeping projectile), **Mute Button** (disables the opponent's specials briefly), **Prime Time** (super: split-screen shouting match) |
-| 6 | **Aam Aadmi** | *Party-less* | The ordinary voter. Underdog, load-shedding, petrol prices | **Load-Shedding** (stage goes dark for both fighters), **Petrol Price Hike** (projectile that grows over time), **Vote ka Haq** (super) |
-| Boss | **The Hidden Hand** | *None* | Faceless, never named, always in control. **Legal review required before including this one** | **Selection** (pulls a fighter back into the round), **Hybrid Regime** (copies the opponent's moveset) |
+The full roster bible, with every fighter's archetype, play style, gimmick, moves, lines and rivalries, is in **[ROSTER.md](./ROSTER.md)**.
 
-**Template for each fighter** (to fill in per character later):
-- Bio and one-line intro quip, plus a win quote and a lose quote (in Urdu, Roman Urdu and English)
-- Stats: health, walk speed, jump arc, weight
-- Move list: 4–6 normals, 3 specials (mapped to Simple inputs: neutral, forward and back + Special), 1 super, 1 throw
-- Colour palette, plus a mirror-match alternate palette
-- Voice lines: intro, 3 attack shouts, hurt, KO, win
+### 5.1 Roster at a glance
 
-**Not in the launch roster:** figures whose satire relies on religious themes. See §8.
+| Group | Fighters |
+|---|---|
+| *Tehreek-e-Tabdeeli* (4) | Kaptaan, Mr. Plus, Doctor 19 Points, March Wala |
+| *PML-Nihari* (4) | Sher Mian, Speed Sahib, Madam CM, Sharm Sahib |
+| *Awami Party Zindabad* (3) | Jiyala Junior, Bara Sahib, Sindh Sarkar |
+| *Muttahida Patang Front* (2) | Patang Bhai ⚠️, Mayor Sahib |
+| Single-fighter parties (3) | Mitti Pao Chaudhry, Sheikh Sahib, Jahaz Wala |
+| Non-politicians (4) | Anchor Sahib, Aam Aadmi, Lota, Hashtag Bhai |
+| Secret boss | The Hidden Hand ⚠️ |
 
-**Start small:** the first playable build ships with **2 fighters**. More are added once the core feels fun.
+⚠️ = needs legal review before design work starts. There's a bench of 5 alternates in ROSTER.md for any slot that fails review.
+
+**Design rules for the roster:**
+- **Every fighter has one unique gimmick.** Kaptaan's U-Turn, Sheikh Sahib's Prediction, Lota copying moves. The gimmick is the joke *and* the gameplay hook.
+- **Play styles are spread out.** All-rounder, rushdown, zoner, grappler, trap, counter, summoner, copycat, comeback. No two fighters play the same way.
+- **Even-handed.** Joke intensity and fighter strength are balanced across parties (§8.3).
+
+### 5.2 Standard fighter kit
+
+| Slot | Count | Unique art per fighter? |
+|---|---|---|
+| Normals (standing, crouching and jumping; Light and Heavy) | 6 | No: shared per body rig, with fighter-specific props and effects |
+| Throw | 1 | Yes (short) |
+| Specials (S, →S, ←S) | 3 | Yes |
+| Super (1 bar) | 1 | Yes |
+| **Jalsa Ultimate** (3 bars) | 1 | Yes, as a **comic-panel cinematic** (2–4 illustrated panels with zoom, shake and a voice line) |
+| Gimmick | 1 | Usually code or effects only |
+| Taunt | 1 | Yes (voice line plus a short pose) |
+| Intro, win and lose poses | 3 | Yes (simple poses) |
+| Voice lines | about 8 | Intro, taunt, win, lose, 3 attack shouts, hurt. Plus rival-specific lines |
+
+### 5.3 Making 20 fighters achievable
+
+20 fighters drawn frame by frame would be several thousand drawings. Instead:
+
+1. **Shared body rigs.** Four rigs (A slim, B medium, C large, D compact) plus one unique (Lota). Walking, jumping, blocking, hit reactions and the 6 normals are animated **once per rig** and reused by every fighter on that rig.
+2. **Cut-out ("puppet") animation.** Each fighter is drawn as separate parts: head, torso, arms, legs, props. At runtime the game moves and rotates the parts using keyframe data, like a paper doll. With the big-head style, **the head carries the likeness**: each fighter needs a head with about 5 expressions, an outfit, and their props. Parts atlases are tiny (well under 1 MB per fighter), which is ideal for phones.
+3. **Unique work per fighter is limited to** about 5 animations (3 specials, Super, throw), 3 poses, the Ultimate comic panels, effects, and voice lines.
+4. **An in-house puppet and hitbox editor**: a small browser tool (for development only) for posing parts, setting keyframes and drawing hitboxes in one place, saved as the fighter's JSON. This is the best investment for producing 20 fighters.
+5. **Comic-panel Ultimates** give the most "clip it and share it" value for the least animation work.
+
+### 5.4 Engagement features (content-driven)
+- **Rival intros:** custom pre-fight exchanges for specific pairs (e.g. Kaptaan vs Sher Mian). Cheap to make, fun to discover. Start with about 12 pairs and keep adding.
+- **"Breaking News" result headline:** each match ends with a generated headline card, like *"BREAKING: Kaptaan defeats Sher Mian with a U-Turn in the final second!"* It's built from templates using the finishing move, the time left and the health difference. It's shareable to WhatsApp.
+- **Taunt button:** a voice line and a small meter gain, but it leaves you open to punishment. Taunts are half the fun of a parody game.
+- **Alternate colours and outfits:** 2 palettes per fighter at launch. Extra outfits unlock by playing (e.g. win 10 matches with a fighter).
+- **Secret boss unlock** after finishing Arcade mode.
+- **Character-select barks:** each fighter says a line when picked.
+- **Topical quick updates:** all lines, headlines and rival exchanges live in data files, so new jokes can ship within hours when something happens in the news. **A fad lives on staying topical.**
 
 ## 6. Stages (launch: 4)
 
@@ -148,14 +184,16 @@ Stages are flat, with walls at both edges and no hazards that affect gameplay. B
 
 ### 7.1 Visual style
 - **Caricature, big head with small body** (roughly 1:2 head-to-body ratio). Bold outlines, flat colours, lots of expression. Think editorial cartoons brought to life. Big heads also **read well on small phone screens**.
-- **Hand-drawn 2D sprite sheets**, with about 6–10 frames per move to keep art work manageable. Characters are drawn for a 1280×720 logical screen, and the game scales to fit the device.
+- **Cut-out (puppet) animation** with shared body rigs (see §5.3). Hand-drawn parts and expressive heads, animated at runtime. Characters are drawn for a 1280×720 logical screen, and the game scales to fit the device.
+- **Comic-panel Ultimates:** 2–4 bold illustrated panels per fighter, in the style of a political cartoon strip.
 - **Comedy combat effects:** stars, "DHISHOOM!" text bursts, chappals and tomatoes. No blood or gore, and no realistic weapons.
 - **Parody party branding:** every party gets an *altered* colour scheme and symbol (e.g. a cricket ball instead of a bat, a nihari pot instead of a tiger). **Do not use real party logos, flags or ECP election symbols as-is.**
 
 ### 7.2 Audio
 - Music: dhol, qawwali-inspired and Pakistani pop-chiptune tracks. All original or properly licensed. Compressed small (OGG/M4A, mono for sound effects).
 - Announcer in Urdu/English code-switching ("Round 2… *Fight karo*!").
-- Voices: sound-alike impressionists are fine as parody, but **no clips of real speeches or broadcasts**.
+- Voices: sound-alike impressionists are fine as parody, but **no clips of real speeches or broadcasts**. That's about 8 lines per fighter, plus rival lines, so roughly 200 lines in total. Ideally use 2–4 voice actors who can each do several characters.
+- Text-only subtitles (with a *"…"* voice) are an acceptable fallback for any fighter whose voice isn't recorded yet.
 - Audio starts on the first tap ("Tap to start"), because mobile browsers block sound until the player interacts with the page.
 
 ### 7.3 UX and screens
@@ -183,7 +221,11 @@ Even as a fun side project, these rules matter. Political satire of public figur
 8. **Armed forces, judiciary and intelligence services** are especially high risk. Any character based on them (e.g. *The Hidden Hand*) must be faceless, unnamed, have no insignia, and pass legal review, or be cut.
 9. **Takedown process.** A contact email and a documented process for responding to complaints.
 10. **Hosting.** Host outside Pakistan on a mainstream CDN, and be prepared for the site being blocked in some regions.
-11. **Fighting-game IP.** Use genre mechanics freely, but never another game's character designs, move names, sound effects, UI layout, fonts or logos.
+11. **No gendered or appearance-based jokes about women politicians.** Mock their politics exactly as you would a man's.
+12. **No jokes about anyone's imprisonment, arrest, detention or ongoing court cases.**
+13. **Check for court-ordered media restrictions** on any real figure before parodying them (see Patang Bhai in [ROSTER.md](./ROSTER.md)).
+14. **Use parody names only.** Real names never appear in the game, including inside slogans: "Ek Bara Sahib, sab pe bhari", not the real surname.
+15. **Fighting-game IP.** Use genre mechanics freely, but never another game's character designs, move names, sound effects, UI layout, fonts or logos.
 
 ## 9. Technical requirements
 
@@ -197,7 +239,7 @@ Even as a fun side project, these rules matter. Political satire of public figur
 | Frame rate | 60 fps on mid-range phones. At least 30 fps rendering on the low-end reference device, while the game logic still runs at a fixed 60 Hz |
 | Simulation | Fixed 60 Hz logic tick, separated from rendering |
 | Touch latency | No noticeable delay. Use `pointerdown` events, never click handlers. Disable browser zoom and scroll gestures on the game canvas |
-| Initial download | **5 MB or less** before the title screen. About 1.5 MB or less per fighter and per stage, loaded on demand |
+| Initial download | **5 MB or less** before the title screen. Fighters and stages load on demand: about 1 MB or less per fighter (parts atlas, Ultimate panels and voice) and 1.5 MB or less per stage |
 | Memory | Texture atlases of 2048×2048 or smaller. Unload fighters and stages that aren't in use |
 | Resolution | 1280×720 logical, scaled to fit with letterboxing. Respect notches and safe areas |
 | Input devices | Touch (primary), keyboard, and the Gamepad API |
@@ -232,10 +274,11 @@ This is a fun project, so milestones are about scope rather than deadlines.
 | Milestone | Scope | Exit criteria |
 |---|---|---|
 | **M0: Prototype** | 2 placeholder (grey-box) fighters, 1 stage, touch controls plus keyboard, hitboxes, health, rounds, simple CPU | Feels fun on a **real budget Android phone**, and playtesters want "one more round" |
-| **M1: First playable** | 2 fully drawn fighters, 1 finished stage, audio, menus, disclaimer, PWA | Shareable link that friends actually play |
-| **M2: Launch** | 4–6 fighters, 2–4 stages, CPU, Training, local versus, English and Urdu | Smooth on the reference phone. Content rules in §8 checked |
+| **M1: Pipeline proven** | Puppet and hitbox editor. Body rigs A–D with shared normals. **4 fully finished fighters** (one per rig), including Ultimates and voices. 1 finished stage, menus, disclaimer, PWA | We know what one fighter really costs to make. A shareable link that friends actually play |
+| **M2: Content production** | The remaining 16 fighters, made in batches of 4 (balanced across parties). 4 stages, rival intros, result headlines, taunts, alternate colours | Each batch is playtested and checked against §8 before the next batch starts |
+| **MVP launch** | **20 fighters**, 4 stages, CPU, Training, local versus, English and Urdu | Smooth on the reference phone. Every fighter has passed the content review |
 | **v1.1** | Online friend match through a WhatsApp link | Playable between two phones on 4G |
-| **v1.2** | Arcade mode, boss (if cleared), share cards, more fighters | — |
+| **v1.2** | Arcade mode, secret boss (if cleared), bench fighters as topical drops | — |
 | **Someday, maybe** | Rollback netcode, quick match, Capacitor app store builds | Only if people love it |
 
 ## 11. How we'll know it's working
@@ -253,7 +296,10 @@ No hard targets. It's a silly game. Signs that it's working:
 |---|---|---|---|
 | Touch controls feel bad, a classic problem for mobile fighting games | High | High | Simple specials by default, a generous input buffer, a floating joystick, and early testing with real players |
 | Poor performance on budget phones | Medium | High | Test on the reference device from M0. Texture atlases, small backgrounds, few particles, lazy loading |
-| Art becomes the bottleneck (most fighting-game effort is animation) | High | Medium | Big-head style with few frames, start with 2 fighters, reuse base poses |
+| **Producing 20 fighters takes too long**: art, animation and voice | High | High | Shared rigs, cut-out animation, comic-panel Ultimates, the puppet editor, batches of 4. Measure the real cost per fighter at M1 and adjust |
+| **The fad peaks before launch.** Topical games have a short window | Medium | High | Lines live in data files and can be updated fast. If production drags, consider an early public build of the finished fighters while the rest are made |
+| A fighter fails the content or legal review late in production | Medium | Medium | Review each fighter's concept *before* drawing it. Bench alternates are ready to swap in |
+| Balancing 20 fighters with unique gimmicks | High | Low | It's a silly game, so aim for "nothing is broken", not perfect balance. Track win rates by fighter and adjust the data |
 | Perceived partisanship leads to backlash | Medium | Medium | Even-handed roster and equal joke intensity |
 | Legal complaint, or the site gets blocked | Low–Medium | High | Rules in §8, hosting outside Pakistan, takedown process, legal review if it grows |
 | Mobile browser quirks (audio unlock, fullscreen, iOS Safari) | High | Low | "Tap to start" screen, test on both Android Chrome and iOS Safari early |
@@ -263,7 +309,8 @@ No hard targets. It's a silly game. Signs that it's working:
 ## 13. Open questions
 
 1. Final title: *Siyasi Showdown*, *Jalsa Fighters* or *Dharna Dhamaka*?
-2. Which 2 fighters go in the first playable build?
-3. Is *The Hidden Hand* boss in or out?
-4. Who's doing the art, and in what style: hand-drawn frames, or cut-out (paper-doll) animation?
+2. Which 4 fighters go in M1 (one per rig)? Suggestion: Kaptaan (A), Speed Sahib (B), Sher Mian (C), Sheikh Sahib (D)
+3. Who draws the art, and who voices the characters (how many voice actors)?
+4. Is *The Hidden Hand* boss in or out? And Patang Bhai? Both depend on legal advice.
 5. Should the default language in Pakistan be Urdu or English?
+6. Should we release finished fighters early (e.g. at 8), or hold everything for the 20-fighter launch?
