@@ -2,7 +2,7 @@
 
 We work through every major decision **before** building, and record it here. Each entry explains what the decision is, **why it matters** (the game-dev lesson), the options, a recommendation, and what we chose.
 
-New to a term? See [GLOSSARY.md](./GLOSSARY.md).
+New to a term? See [GLOSSARY.md](./GLOSSARY.md). For when each open decision is due, see the [build plan](./BUILD_PLAN.md).
 
 **Status key:** ✅ decided · 🟡 discussing now · ⬜ not started
 

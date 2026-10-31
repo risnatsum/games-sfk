@@ -47,7 +47,7 @@ Godot or Defold would only be better for an app-first game, because they produce
 | **[Castagne](https://castagneengine.com)** | Open source (check licence) | A fighting-game framework built **on Godot**: frame data, hitboxes, state machines | Small project. Check maturity and how well its web export works |
 | **[Ikemen GO](https://github.com/ikemen-engine/Ikemen-GO)** | MIT | Open-source MUGEN-compatible fighting engine, useful as a design and mechanics reference | Desktop only, not a browser engine |
 
-## Networking (for online PvP, v1.2)
+## Networking (friend matches, in the MVP)
 
 | Library | Licence | Use |
 |---|---|---|
@@ -87,7 +87,7 @@ src/
   render/         # Phaser scenes that draw the game state (no game logic here)
   input/          # touch/keyboard/gamepad → per-frame input bitmask, input buffer
     touch.js      #   virtual joystick + buttons
-  net/            # (v1.1) PeerJS/WebRTC friend matches
+  net/            # PeerJS/WebRTC friend matches (MVP, see BUILD_PLAN.md step 0.4)
 public/assets/    # sprite atlases, audio
 public/manifest   # PWA manifest + icons (via vite-plugin-pwa)
 ```
