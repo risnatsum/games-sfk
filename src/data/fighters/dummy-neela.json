@@ -1,0 +1,187 @@
+{
+  "id": "dummy-neela",
+  "name": "Dummy Neela",
+  "color": "#3b7dd9",
+  "health": 1100,
+  "width": 90,
+  "height": 200,
+  "crouchHeight": 130,
+  "walkSpeed": 340,
+  "backWalkSpeed": 260,
+  "jumpVelocity": 1800,
+  "jumpForward": 400,
+  "gravity": 110,
+  "moves": {
+    "light": {
+      "startup": 4,
+      "active": 3,
+      "recovery": 8,
+      "hitbox": {
+        "x": 30,
+        "y": 130,
+        "w": 90,
+        "h": 30
+      },
+      "hit": {
+        "damage": 46,
+        "hitstun": 15,
+        "blockstun": 10,
+        "hitstop": 6,
+        "pushback": 500
+      },
+      "cancel": ["light", "heavy", "special"]
+    },
+    "heavy": {
+      "startup": 9,
+      "active": 4,
+      "recovery": 17,
+      "hitbox": {
+        "x": 30,
+        "y": 115,
+        "w": 125,
+        "h": 45
+      },
+      "hit": {
+        "damage": 103,
+        "hitstun": 21,
+        "blockstun": 14,
+        "hitstop": 10,
+        "pushback": 800
+      },
+      "cancel": ["special"]
+    },
+    "crouchLight": {
+      "startup": 4,
+      "active": 3,
+      "recovery": 9,
+      "crouching": true,
+      "hitbox": {
+        "x": 30,
+        "y": 15,
+        "w": 95,
+        "h": 30
+      },
+      "hit": {
+        "damage": 40,
+        "hitstun": 14,
+        "blockstun": 9,
+        "hitstop": 6,
+        "pushback": 500,
+        "height": "low"
+      },
+      "cancel": ["light", "heavy", "special"]
+    },
+    "crouchHeavy": {
+      "startup": 10,
+      "active": 4,
+      "recovery": 22,
+      "crouching": true,
+      "hitbox": {
+        "x": 30,
+        "y": 0,
+        "w": 140,
+        "h": 30
+      },
+      "hit": {
+        "damage": 92,
+        "hitstun": 20,
+        "blockstun": 13,
+        "hitstop": 10,
+        "pushback": 700,
+        "height": "low",
+        "knockdown": true
+      }
+    },
+    "jumpAttack": {
+      "startup": 6,
+      "active": 10,
+      "recovery": 4,
+      "hitbox": {
+        "x": 0,
+        "y": -30,
+        "w": 100,
+        "h": 80
+      },
+      "hit": {
+        "damage": 80,
+        "hitstun": 18,
+        "blockstun": 12,
+        "hitstop": 8,
+        "pushback": 500,
+        "height": "high"
+      }
+    },
+    "special": {
+      "startup": 13,
+      "recovery": 22,
+      "projectile": {
+        "offset": 60,
+        "y": 140,
+        "w": 50,
+        "h": 40,
+        "speed": 850,
+        "hit": {
+          "damage": 80,
+          "chip": 10,
+          "hitstun": 18,
+          "blockstun": 14,
+          "hitstop": 7,
+          "pushback": 600
+        }
+      }
+    },
+    "forwardSpecial": {
+      "startup": 11,
+      "active": 6,
+      "recovery": 18,
+      "dash": 800,
+      "hitbox": {
+        "x": 20,
+        "y": 100,
+        "w": 90,
+        "h": 60
+      },
+      "hit": {
+        "damage": 114,
+        "chip": 10,
+        "hitstun": 22,
+        "blockstun": 16,
+        "hitstop": 11,
+        "pushback": 900
+      }
+    },
+    "backSpecial": {
+      "startup": 3,
+      "active": 10,
+      "recovery": 22,
+      "rise": 1500,
+      "invincible": 8,
+      "hitbox": {
+        "x": -10,
+        "y": 120,
+        "w": 90,
+        "h": 130
+      },
+      "hit": {
+        "damage": 126,
+        "chip": 12,
+        "hitstun": 20,
+        "blockstun": 16,
+        "hitstop": 12,
+        "pushback": 600,
+        "knockdown": true
+      }
+    },
+    "throw": {
+      "type": "throw",
+      "startup": 5,
+      "active": 2,
+      "recovery": 22,
+      "range": 30,
+      "hit": {
+        "damage": 138,
+        "hitstop": 10
+      }
+    }
+  }
+}
