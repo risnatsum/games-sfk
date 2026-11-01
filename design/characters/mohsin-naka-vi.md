@@ -46,10 +46,10 @@ Interior Minister and cricket chairman at the same time. He seals the capital wi
 - **Weak to:** Mic, Qanoon
 - **Strong against:** Jalsa, Khandaan
 - **Rivals:**
-  - **Imran U-Khan**
+  - **Imran U-Turn**
     - Imran: "Main container par charh kar aaunga!" (I'll be back on top of a container!)
     - Naka-vi: "Kaun sa? Sab mere hain." (Which one? They're all mine.)
-  - **Speedbaz Sharif**
+  - **Speedbaz**
     - Speedbaz: "Raasta do! Mujhe flyover kholna hai!" (Make way! I've got a flyover to open!)
     - Naka-vi: "Sir, aap ki gaari ke aage bhi container hai." (Sir, there's a container in front of your car too.)
 - **Win quote:** "Haar gaye? Koi baat nahin. Hum bhi har match haarte hain." (You lost? Don't worry. We lose every match too.)

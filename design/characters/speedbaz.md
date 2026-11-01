@@ -1,4 +1,4 @@
-# Speedbaz Sharif
+# Speedbaz
 
 **Based on:** Shehbaz Sharif (internal only)
 **Type:** Jor-Tor
@@ -27,7 +27,7 @@ Prime Minister. He can build a flyover before you've finished objecting to it. R
   - "Main nahin maanta!" (I don't accept it!) *[on getting hit]*
 - **Music:** Brass band at double tempo.
 - **Sounds:** Mic stands clattering. Scissors snipping.
-- **Announcer:** "SPEEDBAZSHARIF!" One word, no breath. Then the mic falls over.
+- **Announcer:** "SPEEDBAAAZ!" One breath, no pause. Then the mic falls over.
 
 ## Moves
 - **Main Nahin Maanta** (I don't accept): Chained rush, one finger-wag per line of the poem. He knows all the lines.
@@ -45,7 +45,7 @@ Prime Minister. He can build a flyover before you've finished objecting to it. R
 - **Weak to:** Khandaan, Mic
 - **Strong against:** Qanoon, Jalsa
 - **Rivals:**
-  - **Imran U-Khan**
+  - **Imran U-Turn**
     - Imran: "Absolutely not!"
     - Speedbaz: "Absolutely yes! What was the question?"
   - **Field Marshal Aseem Lamehdood**

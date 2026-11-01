@@ -1,4 +1,4 @@
-# Sikandar Saintaalis Raja
+# Sikandar Saintaalis
 
 **Based on:** Sikandar Sultan Raja (internal only)
 **Type:** Qanoon
@@ -27,7 +27,7 @@ Chief Election Commissioner. His term ran out a while ago and he stayed on, beca
   - "Shikayat? Form bhar dein." (A complaint? Fill in a form.) *[on getting hit]*
 - **Music:** A ticking clock over a bored synth. The tempo drops when he's winning.
 - **Sounds:** Stamps. A fax machine that never finishes.
-- **Announcer:** "SIKANDAR SAINTAALIS… *[47 seconds of silence]* …RAJA!"
+- **Announcer:** "SIKANDAR… *[47 seconds of silence]* …SAINTAALIS!"
 
 ## Moves
 - **Ballot Box.** Sets a sealed box down between you. A wall you have to break through.
@@ -45,10 +45,10 @@ Chief Election Commissioner. His term ran out a while ago and he stayed on, beca
 - **Weak to:** Jor-Tor, Jalsa
 - **Strong against:** Khandaan, Khaki
 - **Rivals:**
-  - **Imran U-Khan**
+  - **Imran U-Turn**
     - Imran: "Istifa do!" (Resign!)
     - Sikandar: "Notice mil jayega." (You'll be getting a notice.)
-  - **Speedbaz Sharif**
-    - Speedbaz: "Shukriya, Raja sahib!" (Thank you, Raja sahib!)
+  - **Speedbaz**
+    - Speedbaz: "Shukriya, Sikandar sahib!" (Thank you, Sikandar sahib!)
     - Sikandar: "Kis baat ka?" (For what?)
 - **Win quote:** "Mubarak ho. Aap bhi jeet gaye." (Congratulations. You won too.)

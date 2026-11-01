@@ -45,7 +45,7 @@ Has sat in almost every government the country has had. Marched to bring one dow
 - **Weak to:** Khaki, Jor-Tor
 - **Strong against:** Mic, Qanoon
 - **Rivals:**
-  - **Speedbaz Sharif**
+  - **Speedbaz**
     - Speedbaz: "Cabinet mein jagah khaali hai!" (There's a seat free in the cabinet!)
     - Fazl: "Abhi nahin. Hawa dekh raha hoon." (Not yet. I'm checking the wind.)
   - **Mohsin Naka-vi**

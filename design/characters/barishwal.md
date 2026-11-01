@@ -1,4 +1,4 @@
-# Barishwal Bhutto Zardari
+# Barishwal
 
 **Based on:** Bilawal Bhutto Zardari (internal only)
 **Type:** Khandaan
@@ -27,7 +27,7 @@ Party chairman since university and prime-ministerial candidate ever since. He i
   - "Main walk out kar raha hoon." *[Comes straight back.]*
 - **Music:** A rally anthem with a thunderclap on the beat.
 - **Sounds:** Rain on an umbrella. Squelching shoes.
-- **Announcer:** "BARISHWAL… *[thunderclap]* …BHUTTO ZARDARI!"
+- **Announcer:** "BARISH… *[thunderclap]* …WAL!"
 
 ## Moves
 - **Barish Aata Hai** (Rain comes): A cloud drifts over the opponent and rains on them.
@@ -45,7 +45,7 @@ Party chairman since university and prime-ministerial candidate ever since. He i
 - **Weak to:** Qanoon, Khaki
 - **Strong against:** Jor-Tor, Mic
 - **Rivals:**
-  - **Imran U-Khan**
+  - **Imran U-Turn**
     - Barishwal: "Selected PM!"
     - Imran: "Ab yeh hamari line hai." (That's our line now.)
   - **Asif Ali Bhari**

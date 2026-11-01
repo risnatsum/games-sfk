@@ -1,4 +1,4 @@
-# Maryam Nawazish Sharif
+# Maryam Nawazish
 
 **Based on:** Maryam Nawaz (internal only)
 **Type:** Mic
@@ -45,10 +45,10 @@ Chief Minister of Punjab and head of the Department of Her Own Face. She used to
 - **Weak to:** Jalsa, Khandaan
 - **Strong against:** Khaki, Jor-Tor
 - **Rivals:**
-  - **Speedbaz Sharif**
+  - **Speedbaz**
     - Speedbaz: "Yeh metro main ne banayi thi!" (I built this metro!)
     - Maryam: "Tasveer to meri hai." (The picture's mine, though.)
-  - **Barishwal Bhutto Zardari**
+  - **Barishwal**
     - Barishwal: "Jab zyada barish aata hai, to zyada pani aata hai." (When more rain comes, more water comes.)
     - Maryam: "Aur har boond par meri tasveer." (And every drop has my picture on it.)
 - **Win quote:** "Yeh jeet bhi Punjab government ki taraf se." (This win is also brought to you by the Government of Punjab.)

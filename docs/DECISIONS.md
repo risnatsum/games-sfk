@@ -72,12 +72,14 @@ These come first, because they shape everything else.
 
 ## Phase 1: Technical foundations
 
-### 1.1 Phaser 4 or Phaser 3 ⬜
+### 1.1 Phaser 4 or Phaser 3 ✅
+**Decided: Phaser 4.**
 **Why it matters:** major versions differ in features and in how many tutorials exist.
 - **Phaser 4** (latest is 4.2.x) *(recommended)*. Current, with a new faster renderer, and its API is largely familiar to anyone who knows Phaser 3. Fewer tutorials written specifically for it.
 - **Phaser 3** (final is 3.90). Years of tutorials and examples, but it's the previous generation.
 
-### 1.2 Online play architecture (netcode) ⬜
+### 1.2 Online play architecture (netcode) ✅
+**Decided: A, delay-based lockstep**, built so rollback can be added later.
 **Why it matters (key lesson):** two phones must agree on what's happening, 60 times a second, over a network that adds delay. Fighting games solve this differently from most games. **They send only button presses, not positions.** Both phones run the identical simulation with the identical inputs, so they produce the identical fight. That's why the simulation must be **deterministic** (see Glossary).
 - **A. Delay-based lockstep** *(recommended for MVP)*. Each input is scheduled a few frames in the future (e.g. press now, it happens 3 frames from now), so the other phone's input arrives in time. Simple and fair, and on the same Wi-Fi the delay is unnoticeable. Over the internet it can feel slightly sluggish.
 - **B. Rollback.** Guess the opponent's input, show the result immediately, and if the guess was wrong, rewind and replay. It's the gold standard (modern fighting games use it), but it's more complex, and every visual and sound effect must handle being rewound.
@@ -85,28 +87,33 @@ These come first, because they shape everything else.
 
 **Plan:** A for the MVP, built so that B can be added later if internet play feels bad.
 
-### 1.3 How two phones find each other ⬜
+### 1.3 How two phones find each other ✅
+**Decided: A, link or QR code with PeerJS's public signalling server.** TURN relay in v1.1.
 **Why it matters:** phones can't just "call" each other. They need a matchmaker (a **signalling server**) to introduce them, and sometimes a **relay** (TURN) when networks block direct connections. Many mobile networks do.
 - **A. Share a link or QR code, with PeerJS's free public signalling server** *(recommended to start)*. Zero setup. If it turns out unreliable, we host our own later.
 - **B. Host our own signalling server.** More control, but there's a server to run.
 - **Relay (TURN):** not needed on the same Wi-Fi. For internet play on strict networks we'll add a free-tier TURN service in v1.1.
 
-### 1.4 Number system for positions ⬜
+### 1.4 Number system for positions ✅
+**Decided: whole-number subpixels** (1 pixel = 100 units).
 **Why it matters:** different phones can compute decimals (floating-point numbers) with tiny differences. Tiny differences grow, and the two phones' fights drift apart: a **desync**.
 - **Recommendation:** store positions as **whole numbers in "subpixels"** (e.g. 1 pixel = 100 units). Whole-number math is identical on every device.
 
-### 1.5 Animation technology and tools ⬜
+### 1.5 Animation technology and tools ✅
+**Decided: A, our own puppet and hitbox editor.**
 **Why it matters:** with a full roster, animation is the biggest cost (PRD §5.3).
 - **A. Our own small puppet and hitbox editor** in the browser *(recommended)*. Tailored to us, free, and building it is a great learning project.
 - **B. Spine** (paid, about US$70 for the basic edition). A professional, polished tool, and Phaser has official support. Everyone who edits animations needs a licence.
 - **C. Sprite sheets** drawn frame by frame. Simplest technically, but far too much drawing for a full roster.
 
-### 1.6 Testing strategy ⬜
+### 1.6 Testing strategy ✅
+**Decided: Vitest for the simulation, saved replays, and playtest checklists.**
 - **Automated tests** (Vitest) for the fight simulation: *"after this punch hits, health is 90"*. They catch bugs before you do.
 - **Replays:** because the simulation is deterministic, a match can be saved as just its inputs. When something weird happens, you tap "Save replay" and send it to me, and I can watch exactly what happened. **This is how pro fighting-game developers debug.**
 - **Your playtests:** the "what to test" checklists from 0.5.
 
-### 1.7 Project setup ⬜
+### 1.7 Project setup ✅
+**Decided: Vite, ESLint and Prettier.**
 Vite, folder structure (see ENGINES.md), ESLint and Prettier for consistent formatting. This is mostly my call; I'll explain it as we go.
 
 ---

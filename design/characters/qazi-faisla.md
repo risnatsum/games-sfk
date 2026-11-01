@@ -1,4 +1,4 @@
-# Qazi Faisla Isa
+# Qazi Faisla
 
 **Based on:** Qazi Faez Isa (internal only)
 **Type:** Qanoon
@@ -27,7 +27,7 @@ Former Chief Justice. Took a party's bat away weeks before an election and still
   - "Yeh live ja raha hai." (This is going out live.) *[on getting hit]*
 - **Music:** One tanpura note, held. A court typewriter keeps time.
 - **Sounds:** Rubber stamps. The clerk calling the next case.
-- **Announcer:** "Order! Order! …QAZI FAISLA ISA!"
+- **Announcer:** "Order! Order! …QAZI FAISLA!"
 
 ## Moves
 - **Objection Overruled.** Parry stance. Catch a hit and answer it.
@@ -45,7 +45,7 @@ Former Chief Justice. Took a party's bat away weeks before an election and still
 - **Weak to:** Jor-Tor, Jalsa
 - **Strong against:** Khandaan, Khaki
 - **Rivals:**
-  - **Imran U-Khan**
+  - **Imran U-Turn**
     - Imran: "Mera bat wapas do!" (Give me back my bat!)
     - Qazi: "Aap to bowler the." (You were a bowler.)
   - **Field Marshal Aseem Lamehdood**

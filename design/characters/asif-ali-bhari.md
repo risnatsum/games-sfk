@@ -20,7 +20,7 @@ Twice President and grandmaster of the back room. He has made a deal with everyo
 ## Audio
 - **Voice:** Soft and amused. Never raises it. Laughs at jokes nobody made.
 - **Lines:**
-  - "Ek Zardari, sab pe bhari!" (One Zardari outweighs them all!)
+  - "Ek Bhari, sab pe bhari!" (One Bhari outweighs them all!)
   - "Signature kahan karoon?" (Where do I sign?)
   - "Parhne ki zaroorat nahin. Deal main pehle parh chuka hoon." (No need to read it. I've already read the deal.)
   - "Sab se baat hogi." (We'll talk to everyone.)
@@ -32,7 +32,7 @@ Twice President and grandmaster of the back room. He has made a deal with everyo
 ## Moves
 - **Political Chess:** Puts a chess piece on the floor. Walk into it and it takes you.
 - **Eent Se Eent** (Brick by brick): Throws a brick, then he's at the far end of the screen holding a boarding pass.
-- **Ek Zardari:** Counter stance. Takes your hit and hands it back, smiling.
+- **Ek Bhari:** Counter stance. Takes your hit and hands it back, smiling.
 - **Throw: Coalition Handshake.** A long handshake for the cameras. When it ends, you're on his side of the screen.
 - **Super: Checkmate.** The board unfolds under the opponent. Every piece he's placed moves at once.
 - **Ultimate: Sab Pe Bhari.** Everyone he's ever fought walks on and shakes his hand. Then they turn around. The opponent is alone on screen.
@@ -48,7 +48,7 @@ Twice President and grandmaster of the back room. He has made a deal with everyo
   - **Field Marshal Aseem Lamehdood**
     - Bhari: "Eent se eent baja denge!" (We'll bring it down brick by brick!)
     - Lamehdood: "Flight kitne baje hai?" (What time's your flight?)
-  - **Sikandar Saintaalis Raja**
-    - Raja: "Result abhi aana baaqi hai." (The result isn't in yet.)
+  - **Sikandar Saintaalis**
+    - Sikandar: "Result abhi aana baaqi hai." (The result isn't in yet.)
     - Bhari: "Mere paas aa gaya hai." (I've got it already.)
 - **Win quote:** "Aap haar gaye. Lekin coalition mein jagah hai." (You lost. But there's room in the coalition.)

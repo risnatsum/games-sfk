@@ -1,4 +1,4 @@
-# Mian Nashtaaz Sharif
+# Mian Nashtaaz
 
 **Based on:** Nawaz Sharif (internal only)
 **Type:** Khandaan
@@ -27,7 +27,7 @@ Came back from London, handed the top job to his younger brother, and sat down t
   - "Mujhe kyun nikala?" (Why did they throw me out?) *[on KO]*
 - **Music:** A Lahori brass band, playing at breakfast tempo.
 - **Sounds:** Clinking plates. A lion that yawns instead of roaring.
-- **Announcer:** "SHER AYA… *[yawn]* …MIAN NASHTAAZ SHARIF!"
+- **Announcer:** "SHER AYA… *[yawn]* …MIAN NASHTAAZ!"
 
 ## Moves
 - **Sher Aya** (The lion's here): Sends the lion across the screen. It's sleepy, but it gets there.
@@ -45,10 +45,10 @@ Came back from London, handed the top job to his younger brother, and sat down t
 - **Weak to:** Qanoon, Khaki
 - **Strong against:** Jor-Tor, Mic
 - **Rivals:**
-  - **Imran U-Khan**
+  - **Imran U-Turn**
     - Imran: "Kursi chhoro!" (Get out of the chair!)
     - Nashtaaz: "Kaun si? Main to nashte par baitha hoon." (Which one? I'm only sitting at breakfast.)
-  - **Speedbaz Sharif**
+  - **Speedbaz**
     - Speedbaz: "Bhai jaan, ab main kya karoon?" (Brother, what do I do now?)
     - Nashtaaz: "Pehle nashta." (Breakfast first.)
 - **Win quote:** "Dekha? Is baar kisi ne nahin nikala." (See? Nobody threw me out this time.)

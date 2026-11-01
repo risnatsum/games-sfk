@@ -121,12 +121,12 @@ Every fighter has a sheet in **[design/characters/](../design/characters/)**, in
 
 | Type | Fighters |
 |---|---|
-| Mic | Altaf Hello-sain, Maryam Nawazish Sharif |
-| Jalsa | Imran U-Khan, Maulana Fazl-e-Hukumat |
-| Khandaan | Mian Nashtaaz Sharif, Barishwal Bhutto Zardari |
-| Jor-Tor | Speedbaz Sharif, Asif Ali Bhari |
+| Mic | Altaf Hello-sain, Maryam Nawazish |
+| Jalsa | Imran U-Turn, Maulana Fazl-e-Hukumat |
+| Khandaan | Mian Nashtaaz, Barishwal |
+| Jor-Tor | Speedbaz, Asif Ali Bhari |
 | Khaki | Mohsin Naka-vi |
-| Qanoon | Qazi Faisla Isa, Sikandar Saintaalis Raja |
+| Qanoon | Qazi Faisla, Sikandar Saintaalis |
 | Final boss | Field Marshal Aseem Lamehdood (Khaki) |
 
 **Design rules for the roster:**
@@ -159,8 +159,8 @@ A full roster drawn frame by frame would be several thousand drawings. Instead:
 5. **Comic-panel Ultimates** give the most "clip it and share it" value for the least animation work.
 
 ### 5.4 Engagement features (content-driven)
-- **Rival intros:** custom pre-fight exchanges for specific pairs (e.g. Imran U-Khan vs Mian Nashtaaz Sharif). Cheap to make, fun to discover. Start with about 12 pairs and keep adding.
-- **"Breaking News" result headline:** each match ends with a generated headline card, like *"BREAKING: Imran U-Khan defeats Mian Nashtaaz Sharif with a U-Turn in the final second!"* It's built from templates using the finishing move, the time left and the health difference. It's shareable to WhatsApp.
+- **Rival intros:** custom pre-fight exchanges for specific pairs (e.g. Imran U-Turn vs Mian Nashtaaz). Cheap to make, fun to discover. Start with about 12 pairs and keep adding.
+- **"Breaking News" result headline:** each match ends with a generated headline card, like *"BREAKING: Imran U-Turn defeats Mian Nashtaaz with a U-Turn in the final second!"* It's built from templates using the finishing move, the time left and the health difference. It's shareable to WhatsApp.
 - **Taunt button:** a voice line and a small meter gain, but it leaves you open to punishment. Taunts are half the fun of a parody game.
 - **Alternate colours and outfits:** 2 palettes per fighter at launch. Extra outfits unlock by playing (e.g. win 10 matches with a fighter).
 - **Secret boss unlock** after finishing Arcade mode.
@@ -216,7 +216,7 @@ Even as a fun side project, these rules matter. Political satire of public figur
 5. **No religion.** No religious figures, symbols, scripture, prayer or sectarian references, whether in characters, stages or dialogue.
 6. **No real-world violence references.** No jokes about assassinations, terrorist attacks, real killings or custodial abuse. Combat is cartoon slapstick and KOs are comedic ("disqualified!", "sent abroad!").
 7. **No false factual claims.** Avoid jokes that could be read as factual allegations of specific crimes, such as "X stole Rs 500 crore". Keep to exaggeration that is clearly absurd.
-8. **Armed forces, judiciary and intelligence services** are especially high risk. Any character based on them (e.g. Field Marshal Aseem Lamehdood, Qazi Faisla Isa) must be faceless, unnamed, have no insignia, and pass legal review, or be cut.
+8. **Armed forces, judiciary and intelligence services** are especially high risk. Any character based on them (e.g. Field Marshal Aseem Lamehdood, Qazi Faisla) must be faceless, unnamed, have no insignia, and pass legal review, or be cut.
 9. **Takedown process.** A contact email and a documented process for responding to complaints.
 10. **Hosting.** Host outside Pakistan on a mainstream CDN, and be prepared for the site being blocked in some regions.
 11. **No gendered or appearance-based jokes about women politicians.** Mock their politics exactly as you would a man's.
@@ -307,8 +307,8 @@ No hard targets. It's a silly game. Signs that it's working:
 ## 13. Open questions
 
 1. Final title: *Siyasi Showdown*, *Jalsa Fighters* or *Dharna Dhamaka*?
-2. Which 4 fighters go in M1 (one per rig)? Suggestion: Imran U-Khan, Speedbaz Sharif, Mian Nashtaaz Sharif, Altaf Hello-sain
+2. Which 4 fighters go in M1 (one per rig)? Suggestion: Imran U-Turn, Speedbaz, Mian Nashtaaz, Altaf Hello-sain
 3. Who draws the art, and who voices the characters (how many voice actors)?
-4. Are Field Marshal Aseem Lamehdood, Qazi Faisla Isa and Altaf Hello-sain in or out? All depend on legal advice.
+4. Are Field Marshal Aseem Lamehdood, Qazi Faisla and Altaf Hello-sain in or out? All depend on legal advice.
 5. Should the default language in Pakistan be Urdu or English?
 6. Should we release finished fighters early (e.g. at 8), or hold everything for the full-roster launch?

@@ -35,8 +35,8 @@ Each type also beats one type from the other triangle.
 ## Provisional roster
 
 - **Khaki:** Mohsin Naka-vi, Field Marshal Aseem Lamehdood (boss)
-- **Qanoon:** Qazi Faisla Isa, Sikandar Saintaalis Raja
-- **Jor-Tor:** Asif Ali Bhari, Speedbaz Sharif
-- **Mic:** Altaf Hello-sain, Maryam Nawazish Sharif
-- **Jalsa:** Imran U-Khan, Maulana Fazl-e-Hukumat
-- **Khandaan:** Mian Nashtaaz Sharif, Barishwal Bhutto Zardari
+- **Qanoon:** Qazi Faisla, Sikandar Saintaalis
+- **Jor-Tor:** Asif Ali Bhari, Speedbaz
+- **Mic:** Altaf Hello-sain, Maryam Nawazish
+- **Jalsa:** Imran U-Turn, Maulana Fazl-e-Hukumat
+- **Khandaan:** Mian Nashtaaz, Barishwal

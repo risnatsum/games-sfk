@@ -51,7 +51,7 @@ Collects titles. The latest one is for life. He's the last fight in arcade mode,
 - **Weak to:** Mic, Qanoon
 - **Strong against:** Jalsa, Khandaan
 - **Rivals:**
-  - **Imran U-Khan**
+  - **Imran U-Turn**
     - Imran: "Main tumhein nahin chhorunga!" (I won't let you off!)
     - Aseem: "Main kahin ja bhi nahin raha." (I'm not going anywhere either.)
   - **Altaf Hello-sain**

@@ -49,7 +49,7 @@ Founded a party, moved to London, and has run it by phone ever since. He doesn't
   - **Farooq Ek-Ghanta Sattar**
     - Farooq: "Bhai, main siyasat chhor raha hoon." (I'm quitting politics.)
     - Altaf: "Theek hai. Ek ghante baad call karna." (Fine. Call me back in an hour.)
-  - **Imran U-Khan**
+  - **Imran U-Turn**
     - Imran: "Main tumhein rulaunga!" (I'll make you cry!)
     - Altaf: "Rona to mera kaam hai." (Crying is my department.)
 - **Win quote:** "Main band hoon? Nahin bhai, TV band hai. Main to bol raha hoon." (I'm banned? No, the TV is. I'm still talking.)

@@ -1,4 +1,4 @@
-# Imran U-Khan
+# Imran U-Turn
 
 **Based on:** Imran Khan (internal only)
 **Type:** Jalsa
@@ -27,7 +27,7 @@ Won a World Cup, then an election. He says a leader who never U-turns is no lead
   - "Yeh saazish hai!" (It's a conspiracy!) *[waves the letter, on getting hit]*
 - **Music:** Stadium anthem. A DJ drops the beat every time he lands a combo.
 - **Sounds:** Leather on willow. A crowd that goes "Ooooh" on every near miss.
-- **Announcer:** "IMRAN… U… *[tyres screech]* …KHAN!"
+- **Announcer:** "IMRAN… U… *[tyres screech]* …TURN!"
 
 ## Moves
 - **Bouncer:** Long run-up, then a fast ball at head height.
